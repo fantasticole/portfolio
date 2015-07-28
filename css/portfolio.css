@@ -1,0 +1,43 @@
+/*Blue: #65def1 (101, 222, 241)*/
+/*Yellow: #ffffb3 (255, 255, 179)*/
+/*Light Grey: #293132 (41, 49, 50)*/
+/*Dark Grey: #020b22 (2, 11, 34)*/
+/*Maroon: #5f0f40 (95, 15, 64)*/
+#bootstrap-overrides {
+  background-image: url("../images/background.png");
+}
+#bootstrap-overrides .navbar {
+  /*background-color: #020b22;*/
+  background-color: rgba(2, 11, 34, 0.7);
+  border: rgba(2, 11, 34, 0.7);
+}
+#bootstrap-overrides .navbar-brand {
+  color: #fff;
+}
+#bootstrap-overrides .active {
+  background-color: #293132;
+}
+#bootstrap-overrides nav a {
+  color: #65def1;
+}
+#bootstrap-overrides .jumbotron {
+  margin-top: 8%;
+  background-color: rgba(200, 211, 234, 0.8);
+}
+#bootstrap-overrides .navbar-default .navbar-nav > .active > a {
+  background-color: rgba(241, 249, 250, 0.5);
+}
+#bootstrap-overrides .dropdown-menu {
+  background-color: rgba(2, 11, 34, 0.7);
+}
+#bootstrap-overrides .navbar-default .navbar-nav > .open > a {
+  background-color: transparent;
+}
+#bootstrap-overrides .dropdown-menu > li > a:hover {
+  background-color: rgba(101, 222, 241, 0.5);
+  color: #020b22;
+}
+#bootstrap-overrides .dropdown-header {
+  color: #fff;
+  text-transform: uppercase;
+}
