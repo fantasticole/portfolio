@@ -29,6 +29,9 @@
 #bootstrap-overrides p {
   color: #CBA64E;
 }
+#bootstrap-overrides nav a {
+  color: #B18FF0;
+}
 #bootstrap-overrides .navbar {
   background-color: rgba(2, 11, 34, 0.8);
   border: rgba(2, 11, 34, 0.8);
@@ -42,43 +45,9 @@
 #bootstrap-overrides .navbar-brand img {
   height: 100%;
 }
-#bootstrap-overrides nav a {
-  color: #B18FF0;
-}
-#bootstrap-overrides .jumbotron {
-  margin-top: 8%;
-  background-color: rgba(2, 11, 34, 0.7);
-  text-align: center;
-}
-#bootstrap-overrides .jumbotron h1 {
-  margin-top: 0;
-}
 #bootstrap-overrides .navbar-default .navbar-nav > .active > a {
   background-color: rgba(0, 215, 155, 0.8);
   color: #020b22;
-}
-#bootstrap-overrides .dropdown-toggle:focus {
-  background-color: transparent;
-}
-#bootstrap-overrides .dropdown-menu {
-  background-color: rgba(2, 11, 34, 0.9);
-  border: none;
-  text-align: center;
-}
-#bootstrap-overrides .dropdown-menu li a {
-  font-size: 1.5em;
-}
-#bootstrap-overrides .dropdown-menu li.active a {
-  background-color: transparent;
-  color: #FFB400;
-}
-#bootstrap-overrides .dropdown-menu i {
-  font-size: 0.85em;
-  color: #EAE2D4;
-}
-#bootstrap-overrides .dropdown-menu > li > a:hover {
-  background-color: transparent;
-  color: #00D79B;
 }
 #bootstrap-overrides .navbar-default .navbar-toggle {
   border-color: transparent;
@@ -93,6 +62,62 @@
 #bootstrap-overrides .navbar-default .navbar-toggle:hover .icon-bar,
 #bootstrap-overrides .navbar-default .navbar-toggle:focus .icon-bar {
   background-color: #020b22;
+}
+#bootstrap-overrides .dropdown-toggle:focus {
+  background-color: transparent;
+}
+#bootstrap-overrides .dropdown-menu {
+  background-color: rgba(2, 11, 34, 0.9);
+  border: none;
+  text-align: center;
+}
+#bootstrap-overrides .dropdown-menu li a {
+  font-size: 1.5em;
+}
+#bootstrap-overrides .dropdown-menu li > a:hover {
+  background-color: transparent;
+  color: #00D79B;
+}
+#bootstrap-overrides .dropdown-menu li.active a {
+  background-color: transparent;
+  color: #FFB400;
+}
+#bootstrap-overrides .dropdown-menu li.active a:hover {
+  background-color: transparent;
+  color: #FFB400;
+  pointer-events: none;
+}
+#bootstrap-overrides .dropdown-menu i {
+  font-size: 0.85em;
+  color: #EAE2D4;
+}
+#bootstrap-overrides .gifdiv {
+  background-color: #020b22;
+  background: url('../images/gifs/pancakes.gif') center center no-repeat;
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border-radius: 10px;
+  z-index: 10;
+}
+#bootstrap-overrides .gifdiv i {
+  color: #B18FF0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+#bootstrap-overrides .gifdiv i:hover {
+  color: #00D79B;
+}
+#bootstrap-overrides .jumbotron {
+  margin-top: 8%;
+  background-color: rgba(2, 11, 34, 0.7);
+  text-align: center;
+}
+#bootstrap-overrides .jumbotron h1 {
+  margin-top: 0;
 }
 #bootstrap-overrides .contact {
   height: 40%;
@@ -127,23 +152,23 @@
   }
 }
 @media (max-width: 767px) {
-  #bootstrap-overrides .jumbotron {
-    margin-top: 11%;
-  }
   #bootstrap-overrides nav li {
     text-align: center;
   }
+  #bootstrap-overrides .jumbotron {
+    margin-top: 11%;
+  }
 }
 @media (max-width: 650px) {
-  #bootstrap-overrides .jumbotron {
-    margin-top: 15%;
-  }
   #bootstrap-overrides .navbar {
     background-color: rgba(2, 11, 34, 0.85);
   }
   #bootstrap-overrides .navbar a {
     font-size: 1.5em;
     font-weight: bold;
+  }
+  #bootstrap-overrides .jumbotron {
+    margin-top: 15%;
   }
   #bootstrap-overrides .contact a {
     font-size: 1.5em;

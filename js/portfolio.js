@@ -1,4 +1,6 @@
 var main = function(){
+	$('.gifdiv').hide();
+
 	$('.navbar-nav li:lt(3)').click(function(){
 		$('.navbar-nav li').removeClass('active');
 		$(this).addClass('active');
@@ -9,6 +11,19 @@ var main = function(){
 		$('.dropdown').addClass('active');
 		$(this).addClass('active');
 	});
+
+	$('.gifme').click(function(){
+		interface.showGif();
+	});
+
+	$('.giffer').click(function(){
+		interface.showProjGif();
+	});
+
+	$(document).on('click', '.fa-close', function(){
+		$('.gifdiv').hide();
+	});
+
 
 	$(window).resize(function(){
 		if ($(window).width() < 550){
