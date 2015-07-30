@@ -3,41 +3,149 @@
 /*Light Grey: #293132 (41, 49, 50)*/
 /*Dark Grey: #020b22 (2, 11, 34)*/
 /*Maroon: #5f0f40 (95, 15, 64)*/
+/*Purple: #B18FF0 (177, 143, 240)*/
+/*In-Between: #D8A178 216, 161, 120*/
+/*Orange: #FFB400 (255, 180, 0)*/
+/*Light Orange: #CBA64E (203, 166, 78)*/
+/*Grey-Green-Blue: #077D93 (7, 125, 147)*/
+/*Mauve: #682B5E (104, 43, 94)*/
+/*Deep Purple: #1E1454 (30, 20, 84)*/
+/*Plum: #521E6A (82, 30, 106)*/
+/*Teal: #00D79B (0, 215, 155)*/
+/*Forest Green: #03323B (3, 50, 59)*/
 #bootstrap-overrides {
   background-image: url("../images/background.png");
+  color: #FFB400;
+  font-family: 'Italiana', serif;
+}
+#bootstrap-overrides a {
+  text-decoration: none;
+  color: #B18FF0;
+}
+#bootstrap-overrides a:hover {
+  text-decoration: none;
+  color: #00D79B;
+}
+#bootstrap-overrides p {
+  color: #CBA64E;
 }
 #bootstrap-overrides .navbar {
-  /*background-color: #020b22;*/
-  background-color: rgba(2, 11, 34, 0.7);
-  border: rgba(2, 11, 34, 0.7);
+  background-color: rgba(2, 11, 34, 0.8);
+  border: rgba(2, 11, 34, 0.8);
+}
+#bootstrap-overrides .navbar a {
+  font-size: 2em;
 }
 #bootstrap-overrides .navbar-brand {
   color: #fff;
 }
-#bootstrap-overrides .active {
-  background-color: #293132;
+#bootstrap-overrides .navbar-brand img {
+  height: 100%;
 }
 #bootstrap-overrides nav a {
-  color: #65def1;
+  color: #B18FF0;
 }
 #bootstrap-overrides .jumbotron {
   margin-top: 8%;
-  background-color: rgba(200, 211, 234, 0.8);
+  background-color: rgba(2, 11, 34, 0.7);
+  text-align: center;
+}
+#bootstrap-overrides .jumbotron h1 {
+  margin-top: 0;
 }
 #bootstrap-overrides .navbar-default .navbar-nav > .active > a {
-  background-color: rgba(241, 249, 250, 0.5);
-}
-#bootstrap-overrides .dropdown-menu {
-  background-color: rgba(2, 11, 34, 0.7);
-}
-#bootstrap-overrides .navbar-default .navbar-nav > .open > a {
-  background-color: transparent;
-}
-#bootstrap-overrides .dropdown-menu > li > a:hover {
-  background-color: rgba(101, 222, 241, 0.5);
+  background-color: rgba(0, 215, 155, 0.8);
   color: #020b22;
 }
-#bootstrap-overrides .dropdown-header {
-  color: #fff;
-  text-transform: uppercase;
+#bootstrap-overrides .dropdown-toggle:focus {
+  background-color: transparent;
+}
+#bootstrap-overrides .dropdown-menu {
+  background-color: rgba(2, 11, 34, 0.9);
+  border: none;
+  text-align: center;
+}
+#bootstrap-overrides .dropdown-menu li a {
+  font-size: 1.5em;
+}
+#bootstrap-overrides .dropdown-menu li.active a {
+  background-color: transparent;
+  color: #FFB400;
+}
+#bootstrap-overrides .dropdown-menu i {
+  font-size: 0.85em;
+  color: #EAE2D4;
+}
+#bootstrap-overrides .dropdown-menu > li > a:hover {
+  background-color: transparent;
+  color: #00D79B;
+}
+#bootstrap-overrides .navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+#bootstrap-overrides .navbar-default .navbar-toggle .icon-bar {
+  background-color: #B18FF0;
+}
+#bootstrap-overrides .navbar-default .navbar-toggle:hover,
+#bootstrap-overrides .navbar-default .navbar-toggle:focus {
+  background-color: rgba(0, 215, 155, 0.8);
+}
+#bootstrap-overrides .navbar-default .navbar-toggle:hover .icon-bar,
+#bootstrap-overrides .navbar-default .navbar-toggle:focus .icon-bar {
+  background-color: #020b22;
+}
+#bootstrap-overrides .contact {
+  height: 40%;
+  width: 60%;
+  margin: auto;
+  display: -webkit-flex;
+}
+#bootstrap-overrides .contact a {
+  text-decoration: none;
+  color: #B18FF0;
+  font-size: 2em;
+}
+#bootstrap-overrides .contact a:hover {
+  text-decoration: none;
+  color: #00D79B;
+}
+#bootstrap-overrides .git {
+  position: relative;
+  left: 0;
+}
+#bootstrap-overrides .twit {
+  position: relative;
+  margin: auto;
+}
+#bootstrap-overrides .mail {
+  position: relative;
+  right: 0;
+}
+@media (max-width: 950px) {
+  #bootstrap-overrides .jumbotron {
+    margin-top: 11%;
+  }
+}
+@media (max-width: 767px) {
+  #bootstrap-overrides .jumbotron {
+    margin-top: 11%;
+  }
+  #bootstrap-overrides nav li {
+    text-align: center;
+  }
+}
+@media (max-width: 650px) {
+  #bootstrap-overrides .jumbotron {
+    margin-top: 15%;
+  }
+  #bootstrap-overrides .navbar {
+    background-color: rgba(2, 11, 34, 0.85);
+  }
+  #bootstrap-overrides .navbar a {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  #bootstrap-overrides .contact a {
+    font-size: 1.5em;
+  }
 }
