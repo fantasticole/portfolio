@@ -16,10 +16,6 @@ var main = function(){
 		interface.showGif();
 	});
 
-	$('.giffer').click(function(){
-		interface.showProjGif();
-	});
-
 	$(document).on('click', '.fa-close', function(){
 		$('.gifdiv').hide();
 	});

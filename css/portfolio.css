@@ -119,6 +119,9 @@
 #bootstrap-overrides .jumbotron h1 {
   margin-top: 0;
 }
+#bootstrap-overrides .jumbotron b {
+  color: #fff;
+}
 #bootstrap-overrides .contact {
   height: 40%;
   width: 60%;
