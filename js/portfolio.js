@@ -20,6 +20,18 @@ var main = function(){
 		$('.gifdiv').hide();
 	});
 
+	var config = {
+		"id": '628733595385995265',
+		"domId": 'timeline',
+		"maxTweets": 15,
+		"enableLinks": true,
+		"showUser": true,
+		"showTime": true,
+		"showInteraction": false,
+		"lang": 'en'
+	};
+
+	twitterFetcher.fetch(config);
 
 	$(window).resize(function(){
 		if ($(window).width() < 550){
@@ -29,6 +41,7 @@ var main = function(){
 		else {
 			$('.contact i').removeClass('fa-2x');
 			$('.contact i').addClass('fa-3x');
+			$('.timePosted').show();
 		}
 	});
 };
