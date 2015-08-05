@@ -15,6 +15,7 @@
 /*Forest Green: #03323B (3, 50, 59)*/
 #bootstrap-overrides {
   background-image: url("../images/background.png");
+  background-attachment: fixed;
   color: #FFB400;
   font-family: 'Italiana', serif;
 }
@@ -62,6 +63,10 @@
 #bootstrap-overrides .navbar-default .navbar-toggle:hover .icon-bar,
 #bootstrap-overrides .navbar-default .navbar-toggle:focus .icon-bar {
   background-color: #020b22;
+}
+#bootstrap-overrides .navbar-default .navbar-collapse,
+#bootstrap-overrides .navbar-default .navbar-form {
+  border-color: #521E6A;
 }
 #bootstrap-overrides .dropdown-toggle:focus {
   background-color: transparent;
@@ -122,6 +127,21 @@
 #bootstrap-overrides .jumbotron b {
   color: #fff;
 }
+#bootstrap-overrides .info {
+  width: 100%;
+}
+#bootstrap-overrides .info h1 {
+  text-align: left;
+}
+#bootstrap-overrides .info .me {
+  width: 25%;
+  float: left;
+  border-radius: 6px;
+}
+#bootstrap-overrides .info .about {
+  margin-left: 27%;
+  width: 73%;
+}
 #bootstrap-overrides .contact {
   height: 40%;
   width: 84%;
@@ -137,12 +157,16 @@
   text-decoration: none;
   color: #00D79B;
 }
-#bootstrap-overrides .git,
-#bootstrap-overrides .twit,
-#bootstrap-overrides .linked,
-#bootstrap-overrides .mail {
+#bootstrap-overrides .contact .git,
+#bootstrap-overrides .contact .twit,
+#bootstrap-overrides .contact .linked,
+#bootstrap-overrides .contact .mail {
   flex: 1;
+  width: 25%;
   position: relative;
+}
+#bootstrap-overrides .links {
+  font-size: 1.5em;
 }
 #bootstrap-overrides .ttt {
   width: 95%;
@@ -159,6 +183,14 @@
   position: relative;
   margin: auto;
 }
+#bootstrap-overrides .tweets #timeline {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+}
 #bootstrap-overrides .tweets a {
   text-decoration: none;
 }
@@ -168,14 +200,19 @@
 #bootstrap-overrides .tweets ul {
   border-radius: 6px;
   padding: 0px;
-  width: 100%;
+  width: 97%;
+  height: 95%;
   list-style: none;
   background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  left: 1.5%;
+  top: 2.5%;
+  overflow-y: auto;
 }
 #bootstrap-overrides .tweets li {
   padding-top: 3px;
-  display: flex;
-  flex-direction: row;
+  position: relative;
+  width: 100%;
   margin: 0px 0px 2px;
   border-bottom: 1px solid #FFB400;
   height: 6em;
@@ -183,45 +220,42 @@
 #bootstrap-overrides .tweets li:last-child {
   border-bottom: none;
 }
-#bootstrap-overrides .tweets li:after {
-  content: "";
-  border-color: transparent #521E6A transparent transparent;
-  border-style: solid;
-  border-width: 1px;
-  height: 90%;
-  position: relative;
-  bottom: 0;
-  right: 11.5%;
-}
 #bootstrap-overrides .tweets .user {
-  flex: 1;
-  position: relative;
-}
-#bootstrap-overrides .tweets .user a span[data-scribe="element:name"] {
+  width: 10%;
   position: absolute;
-  top: 0;
-  left: 115%;
-  white-space: nowrap;
-  font-weight: bold;
+  height: 100%;
 }
-#bootstrap-overrides .tweets .user a span[data-scribe="element:screen_name"] {
+#bootstrap-overrides .tweets .user .pic {
   position: absolute;
-  top: 0;
-  left: 285%;
-}
-#bootstrap-overrides .tweets .user img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-left: 5%;
-  margin-bottom: 10%;
+  left: 7%;
   height: 90%;
-  border-radius: 5px;
+  width: 90%;
+}
+#bootstrap-overrides .tweets .user .pic img {
+  height: 75%;
+  border-radius: 2px;
+  margin-top: 15%;
+}
+#bootstrap-overrides .tweets .user .twitter {
+  position: absolute;
+  left: 100%;
+  white-space: nowrap;
+  padding-left: 10%;
+}
+#bootstrap-overrides .tweets .user .twitter b {
+  color: #B18FF0;
+}
+#bootstrap-overrides .tweets .user .twitter a:hover b {
+  color: #521E6A;
 }
 #bootstrap-overrides .tweets .tweet {
-  flex: 7;
-  margin-top: 3%;
-  position: relative;
+  width: 80%;
+  height: 93%;
+  padding-top: 3%;
+  position: absolute;
+  left: 10%;
+  padding-left: 5%;
+  border-right: 1px solid #521E6A;
 }
 #bootstrap-overrides .tweets .tweet p {
   font-size: 1.1em;
@@ -235,25 +269,12 @@
   margin: 0;
 }
 #bootstrap-overrides .tweets .timePosted {
-  flex: 1;
+  width: 10%;
+  height: 100%;
   font-size: 0.9em;
   margin-top: 2%;
-}
-#bootstrap-overrides #timeline {
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
-  padding: 0;
-  margin: 0;
-  overflow-y: auto;
-}
-@media (min-width: 1200px) {
-  #bootstrap-overrides #timeline .user a span[data-scribe="element:name"] {
-    left: 90%;
-  }
-  #bootstrap-overrides #timeline .user a span[data-scribe="element:screen_name"] {
-    left: 225%;
-  }
+  position: absolute;
+  right: 0;
 }
 @media (max-width: 991px) {
   #bootstrap-overrides .container {
@@ -263,46 +284,19 @@
     margin-top: 11%;
     width: 100%;
   }
-  #bootstrap-overrides .tweets {
+  #bootstrap-overrides .jumbotron .tweets {
     width: 90%;
   }
-  #bootstrap-overrides #timeline li {
-    height: 5em;
+  #bootstrap-overrides .jumbotron .tweets li .user .twitter {
+    padding-left: 30%;
+    font-size: 85%;
   }
-  #bootstrap-overrides #timeline .user img {
-    height: 80%;
-    margin-bottom: 15%;
+  #bootstrap-overrides .jumbotron .tweets .tweet p {
+    font-size: 0.9em;
   }
-  #bootstrap-overrides #timeline .user a span[data-scribe="element:name"] {
-    left: 100%;
-    font-size: 80%;
-  }
-  #bootstrap-overrides #timeline .user a span[data-scribe="element:screen_name"] {
-    left: 250%;
-    font-size: 80%;
-  }
-  #bootstrap-overrides #timeline .tweet p {
-    font-size: 95%;
-    margin-left: 0.35em;
-    margin-right: 0.35em;
-  }
-  #bootstrap-overrides #timeline .timePosted {
-    font-size: 75%;
-  }
-}
-@media (max-width: 860px) {
-  #bootstrap-overrides #timeline .user img {
-    height: 80%;
-    margin-bottom: 15%;
-  }
-  #bootstrap-overrides #timeline .user a span[data-scribe="element:name"] {
-    left: 110%;
-    font-size: 80%;
-  }
-  #bootstrap-overrides #timeline .user a span[data-scribe="element:screen_name"] {
-    left: 270%;
-    margin-left: 20%;
-    font-size: 80%;
+  #bootstrap-overrides .jumbotron .tweets .timePosted {
+    font-size: 0.8em;
+    margin-top: 3%;
   }
 }
 @media (max-width: 767px) {
@@ -312,43 +306,17 @@
   #bootstrap-overrides .jumbotron {
     margin-top: 11%;
   }
+  #bootstrap-overrides .jumbotron li .user .twitter {
+    padding-left: 45%;
+  }
+  #bootstrap-overrides .jumbotron li .tweet p {
+    font-size: 90%;
+  }
+  #bootstrap-overrides .jumbotron li .timePosted {
+    font-size: 85%;
+  }
   #bootstrap-overrides .ttt {
     width: 100%;
-  }
-  #bootstrap-overrides #timeline li {
-    flex-direction: column;
-  }
-  #bootstrap-overrides #timeline .user {
-    flex: 1;
-  }
-  #bootstrap-overrides #timeline .user img {
-    height: 300%;
-    top: 0;
-    margin-left: 1%;
-    margin-top: 1%;
-    margin-bottom: 0;
-  }
-  #bootstrap-overrides #timeline .user a span[data-scribe="element:name"],
-  #bootstrap-overrides #timeline .user a span[data-scribe="element:screen_name"] {
-    left: 13%;
-  }
-  #bootstrap-overrides #timeline .tweet {
-    flex: 2;
-    padding-left: 10%;
-    margin-top: 0;
-  }
-  #bootstrap-overrides #timeline .tweet .act {
-    bottom: -50%;
-  }
-  #bootstrap-overrides #timeline .timePosted {
-    flex: 1;
-    position: relative;
-    margin: auto;
-    bottom: 4%;
-    font-size: 80%;
-  }
-  #bootstrap-overrides #timeline li:after {
-    display: none;
   }
 }
 @media (max-width: 650px) {
@@ -360,31 +328,46 @@
     font-weight: bold;
   }
   #bootstrap-overrides .jumbotron {
-    margin-top: 15%;
+    margin-top: 20%;
   }
   #bootstrap-overrides .jumbotron .contact a {
     font-size: 1em;
   }
-  #bootstrap-overrides .jumbotron .user img {
-    height: 300%;
+  #bootstrap-overrides .jumbotron h1 {
+    text-align: center;
+  }
+  #bootstrap-overrides .jumbotron .info .me {
+    width: 35%;
+    margin-top: 0;
+    margin-right: 2%;
+  }
+  #bootstrap-overrides .jumbotron .info .about {
+    margin-left: 0%;
+    width: 100%;
+    text-align: center;
+  }
+  #bootstrap-overrides .jumbotron li .user {
+    left: -9%;
+    font-size: 80%;
+  }
+  #bootstrap-overrides .jumbotron li .user .pic {
+    display: none;
   }
   #bootstrap-overrides .jumbotron .tweet {
-    padding-left: 12%;
+    width: 95%;
+    margin: auto;
+    border-right: none;
+    left: 2.5%;
+    padding-top: 6%;
+    font-size: 0.8em;
   }
-  #bootstrap-overrides #timeline .user img {
-    display: none;
+  #bootstrap-overrides .jumbotron .tweet .act {
+    right: 2%;
+    bottom: 2%;
   }
-  #bootstrap-overrides #timeline .user a span[data-scribe="element:name"] {
-    display: none;
-  }
-  #bootstrap-overrides #timeline .user a span[data-scribe="element:screen_name"] {
-    margin-left: -10%;
-  }
-  #bootstrap-overrides #timeline .tweet {
-    padding-left: 0;
-  }
-  #bootstrap-overrides #timeline .timePosted {
-    margin-left: 3%;
-    bottom: 0;
+  #bootstrap-overrides .jumbotron #timeline .timePosted {
+    margin-top: 0;
+    width: 100%;
+    top: 75%;
   }
 }

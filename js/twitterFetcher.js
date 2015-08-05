@@ -262,39 +262,47 @@
             }
           }
           if (printUser) {
-            op += '<div class="user">' + strip(authors[n].innerHTML) +
-                '</div>';
+            var inside = strip(authors[n].innerHTML);
+            var image = inside.slice(inside.indexOf('<img'), inside.indexOf('ar">')+4);
+            op += '<div class="user"><a class="pic" href="https://twitter.com/AnotherCoat" target="_blank">' + image +
+                '</a><a class="twitter" href="https://twitter.com/AnotherCoat" target="_blank"><b>Polish Suggesions.</b> @Another Coat</a></div>';
           }
           var status = tids[n];
           op += '<div class="tweet"><p>' + strip(tweets[n].innerHTML) + '</p><div class="act"><a href="https://twitter.com/intent/tweet?in_reply_to=' + status + '" title="Reply" target="_blank"><i class="fa fa-reply"></i></a> <a href="https://twitter.com/intent/retweet?tweet_id=' + status + '" title="Retweet" target="_blank"><i class="fa fa-retweet"></i></a> <a href="https://twitter.com/intent/favorite?tweet_id=' + status + '" title="Favorite" target="_blank"><i class="fa fa-star"></i></a></div></div>';
           if (printTime) {
             if (permalinks) {
-              op += '<p class="timePosted"><a href="' + permalinksURL[n] +
-                 '">' + times[n].getAttribute('aria-label') + '</a></p>';
+              op += '<div class="timePosted"><a href="' + permalinksURL[n] +
+                 '">' + times[n].getAttribute('aria-label') + '</a></div>';
             } else {
-              op += '<p class="timePosted">' +
-                  times[n].getAttribute('aria-label') + '</p>';
+              op += '<div class="timePosted">' +
+                  times[n].getAttribute('aria-label') + '</div>';
             }
           }
         } else {
           if (tweets[n].innerText) {
             if (printUser) {
-              op += '<p class="user">' + authors[n].innerText + '</p>';
+              var inside = authors[n].innerText;
+              var image = inside.slice(inside.indexOf('<img'), inside.indexOf('ar">')+4);
+              op += '<div class="user"><a class="pic" href="https://twitter.com/AnotherCoat" target="_blank">' + image +
+                '</a><a class="twitter" href="https://twitter.com/AnotherCoat" target="_blank"><b>Polish Suggesions.</b> @Another Coat</a></div>'
             }
             var status = tids[n];
             op += '<div class="tweet"><p>' +  tweets[n].innerText + '</p><div class="act"><a href="https://twitter.com/intent/tweet?in_reply_to=' + status + '" title="Reply" target="_blank"><i class="fa fa-reply"></i></a> <a href="https://twitter.com/intent/retweet?tweet_id=' + status + '" title="Retweet" target="_blank"><i class="fa fa-retweet"></i></a> <a href="https://twitter.com/intent/favorite?tweet_id=' + status + '" title="Favorite" target="_blank"><i class="fa fa-star"></i></a></div></div>';
             if (printTime) {
-              op += '<p class="timePosted">' + times[n].innerText + '</p>';
+              op += '<div class="timePosted">' + times[n].innerText + '</div>';
             }
 
           } else {
             if (printUser) {
-              op += '<p class="user">' + authors[n].textContent + '</p>';
+              var inside = authors[n].textContent;
+              var image = inside.slice(inside.indexOf('<img'), inside.indexOf('ar">')+4);
+              op += '<div class="user"><a class="pic" href="https://twitter.com/AnotherCoat" target="_blank">' + image +
+                '</a><a class="twitter" href="https://twitter.com/AnotherCoat" target="_blank"><b>Polish Suggesions.</b> @Another Coat</a></div>'
             }
             var status = tids[n];
             op += '<div class="tweet"><p>' +  tweets[n].textContent + '</p><div class="act"><a href="https://twitter.com/intent/tweet?in_reply_to=' + status + '" title="Reply" target="_blank"><i class="fa fa-reply"></i></a> <a href="https://twitter.com/intent/retweet?tweet_id=' + status + '" title="Retweet" target="_blank"><i class="fa fa-retweet"></i></a> <a href="https://twitter.com/intent/favorite?tweet_id=' + status + '" title="Favorite" target="_blank"><i class="fa fa-star"></i></a></div></div>';
             if (printTime) {
-              op += '<p class="timePosted">' + times[n].textContent + '</p>';
+              op += '<div class="timePosted">' + times[n].textContent + '</div>';
             }
           }
         }
