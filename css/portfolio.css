@@ -124,7 +124,7 @@
 }
 #bootstrap-overrides .contact {
   height: 40%;
-  width: 60%;
+  width: 84%;
   margin: auto;
   display: -webkit-flex;
 }
@@ -137,17 +137,12 @@
   text-decoration: none;
   color: #00D79B;
 }
-#bootstrap-overrides .git {
-  position: relative;
-  left: 0;
-}
-#bootstrap-overrides .twit {
-  position: relative;
-  margin: auto;
-}
+#bootstrap-overrides .git,
+#bootstrap-overrides .twit,
+#bootstrap-overrides .linked,
 #bootstrap-overrides .mail {
+  flex: 1;
   position: relative;
-  right: 0;
 }
 #bootstrap-overrides .ttt {
   width: 95%;
@@ -368,7 +363,7 @@
     margin-top: 15%;
   }
   #bootstrap-overrides .jumbotron .contact a {
-    font-size: 1.5em;
+    font-size: 1em;
   }
   #bootstrap-overrides .jumbotron .user img {
     height: 300%;
