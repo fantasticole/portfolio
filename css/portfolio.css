@@ -168,18 +168,33 @@
 #bootstrap-overrides .links {
   font-size: 1.5em;
 }
+#bootstrap-overrides .code {
+  font-family: courier;
+  background-color: #fff;
+  padding: 1px;
+  margin: 1px;
+  border-radius: 5px;
+}
 #bootstrap-overrides .ttt {
-  width: 95%;
+  width: 75%;
   height: 600px;
   border-radius: 8px;
   border: 1px solid #FFB400;
+}
+#bootstrap-overrides .tabber img,
+#bootstrap-overrides .mismatch img {
+  height: 29vw;
+  width: auto;
+  border-radius: 6px;
+  border: 2px solid #FFB400;
+  margin: 5px;
 }
 #bootstrap-overrides .tweets {
   background-color: rgba(255, 180, 0, 0.7);
   padding: 10px;
   border-radius: 10px;
   width: 80%;
-  height: 400px;
+  height: 350px;
   position: relative;
   margin: auto;
 }
@@ -191,6 +206,9 @@
   margin: 0;
   overflow-y: auto;
 }
+#bootstrap-overrides .tweets #timeline p {
+  color: #521E6A;
+}
 #bootstrap-overrides .tweets a {
   text-decoration: none;
 }
@@ -201,12 +219,12 @@
   border-radius: 6px;
   padding: 0px;
   width: 97%;
-  height: 95%;
+  height: 87.5%;
   list-style: none;
   background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   left: 1.5%;
-  top: 2.5%;
+  top: 10%;
   overflow-y: auto;
 }
 #bootstrap-overrides .tweets li {
@@ -317,6 +335,16 @@
   }
   #bootstrap-overrides .ttt {
     width: 100%;
+  }
+  #bootstrap-overrides .tabber .narrow,
+  #bootstrap-overrides .mismatch .narrow {
+    width: 50%;
+    height: auto;
+  }
+  #bootstrap-overrides .tabber .wide,
+  #bootstrap-overrides .mismatch .wide {
+    width: 75%;
+    height: auto;
   }
 }
 @media (max-width: 650px) {

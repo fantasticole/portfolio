@@ -56,15 +56,20 @@
         <div class="links">
           <a href="https://github.com/fantasticole/insta" target="_blank"><i class='fa fa-github'></i> Code</a> | <a href="https://mismatch.herokuapp.com/" target="_blank"> Site <i class='fa fa-external-link-square'></i></a>
         </div>
-        <p>This is a browser-based web app that communicates with the Instagram API in order to get list of the visitor's followers and the accounts that user follows. This information is passed through a node server before being graphically displayed on the left hand side using CSS.</p>
-        <p><b>GOAL</b>:</p>
-          <p>Build a web app using the Instagram API. As I built it, this goal morphed into building an app to show the difference between the accounts a user follows and what that user is followed by.</p>
-        <p><b>CHALLENGES</b>:</p>
-          <p>Hide the user's access token.</p>
-          <p>Build my first node server.</p>
-          <p>Get as much information as possible without exceeding the amount of calls to the API that Instagram allows.</p>
-        <p><b>SOLUTION</b>:</p>
-          <p>Something</p>
+        <p>Mismatch is a browser-based web app that visitors log into using their Instagram accounts. It communicates with the Instagram API to get a list of the visitor's followers as well as the accounts that user follows. This information is passed through a node server before being graphically displayed using CSS. Once logged in, the visitor can search other handles to find information on the specified user.</p>
+        <div class="mismatch">
+          <img class="wide" src="../images/desktop.png" title="Desktop UI">
+          <img class="narrow" src="../images/mobile.png" title="Mobile UI">
+        </div>
+        </br>
+          <p><b>Challenge</b>: Hide the user's access token.</p>
+          <p><b>Solution</b>: When the app first went live, there was no server and the access token was passed to the app attached to the redirect URL. To keep this from being shared by anyone passing the link along, I stored the token as a JavaScript variable and cut the token out of the URL window.</p>
+        </br>
+          <p><b>Challenge</b>: Display difference between mismatches.</p>
+          <p><b>Solution</b>: I found the difference between a user's followers and the accounts that user follows by creating an array for each, comparing them and then creating two new arrays called 'Not Following' and 'Not Followed By.' At first, I displayed the data in two lists, but that wasn't aesthetically pleasing. Then I merged the array with the full list of followers and accounts the user follows, making sure to mark the mismatches graphically. Finally, I decided to display one master list of all of the users associated with an account using CSS to visualize the relationship between the user and their connections. This also proved helpful to an additional <b>challenge</b>, getting as much information as possible without exceeding the amount of calls to the API that Instagram allows.</p>
+        </br>
+          <p><b>Challenge</b>: When a user searched for a different handle, their connections were still showing up under the searched user's heading.
+          <p><b>Solution</b>: After logging some information to the console, I saw that handle that was typed in was, indeed, getting searched. That led me to look to the bottom of the list, where I found the new search's connections appended. It was an easy fix to make sure the old information was cleared every time a new search was performed.</p>
       </div>
     </div>
     <script src="../js/jQuery.js"></script>

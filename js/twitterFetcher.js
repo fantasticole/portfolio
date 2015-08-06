@@ -265,7 +265,7 @@
             var inside = strip(authors[n].innerHTML);
             var image = inside.slice(inside.indexOf('<img'), inside.indexOf('ar">')+4);
             op += '<div class="user"><a class="pic" href="https://twitter.com/AnotherCoat" target="_blank">' + image +
-                '</a><a class="twitter" href="https://twitter.com/AnotherCoat" target="_blank"><b>Polish Suggesions.</b> @Another Coat</a></div>';
+                '</a><a class="twitter" href="https://twitter.com/AnotherCoat" target="_blank"><b>Polish Suggestions.</b> @Another Coat</a></div>';
           }
           var status = tids[n];
           op += '<div class="tweet"><p>' + strip(tweets[n].innerHTML) + '</p><div class="act"><a href="https://twitter.com/intent/tweet?in_reply_to=' + status + '" title="Reply" target="_blank"><i class="fa fa-reply"></i></a> <a href="https://twitter.com/intent/retweet?tweet_id=' + status + '" title="Retweet" target="_blank"><i class="fa fa-retweet"></i></a> <a href="https://twitter.com/intent/favorite?tweet_id=' + status + '" title="Favorite" target="_blank"><i class="fa fa-star"></i></a></div></div>';
@@ -284,7 +284,7 @@
               var inside = authors[n].innerText;
               var image = inside.slice(inside.indexOf('<img'), inside.indexOf('ar">')+4);
               op += '<div class="user"><a class="pic" href="https://twitter.com/AnotherCoat" target="_blank">' + image +
-                '</a><a class="twitter" href="https://twitter.com/AnotherCoat" target="_blank"><b>Polish Suggesions.</b> @Another Coat</a></div>'
+                '</a><a class="twitter" href="https://twitter.com/AnotherCoat" target="_blank"><b>Polish Suggestions.</b> @Another Coat</a></div>'
             }
             var status = tids[n];
             op += '<div class="tweet"><p>' +  tweets[n].innerText + '</p><div class="act"><a href="https://twitter.com/intent/tweet?in_reply_to=' + status + '" title="Reply" target="_blank"><i class="fa fa-reply"></i></a> <a href="https://twitter.com/intent/retweet?tweet_id=' + status + '" title="Retweet" target="_blank"><i class="fa fa-retweet"></i></a> <a href="https://twitter.com/intent/favorite?tweet_id=' + status + '" title="Favorite" target="_blank"><i class="fa fa-star"></i></a></div></div>';
@@ -297,7 +297,7 @@
               var inside = authors[n].textContent;
               var image = inside.slice(inside.indexOf('<img'), inside.indexOf('ar">')+4);
               op += '<div class="user"><a class="pic" href="https://twitter.com/AnotherCoat" target="_blank">' + image +
-                '</a><a class="twitter" href="https://twitter.com/AnotherCoat" target="_blank"><b>Polish Suggesions.</b> @Another Coat</a></div>'
+                '</a><a class="twitter" href="https://twitter.com/AnotherCoat" target="_blank"><b>Polish Suggestions.</b> @Another Coat</a></div>'
             }
             var status = tids[n];
             op += '<div class="tweet"><p>' +  tweets[n].textContent + '</p><div class="act"><a href="https://twitter.com/intent/tweet?in_reply_to=' + status + '" title="Reply" target="_blank"><i class="fa fa-reply"></i></a> <a href="https://twitter.com/intent/retweet?tweet_id=' + status + '" title="Retweet" target="_blank"><i class="fa fa-retweet"></i></a> <a href="https://twitter.com/intent/favorite?tweet_id=' + status + '" title="Favorite" target="_blank"><i class="fa fa-star"></i></a></div></div>';

@@ -56,18 +56,21 @@
         <div class="links">
           <a href="https://github.com/fantasticole/firsttwitterbot" target="_blank"><i class='fa fa-github'></i> Code</a> | <a href="https://twitter.com/AnotherCoat" target="_blank"> Site <i class='fa fa-external-link-square'></i></a>
         </div>
-        <p>This Twitter bot randomly picks a nail polish color from a JSON file and tweets the brand, collection and color names. The JSON data was collected by scraping the brands’ sites.</p>
-        <p><b>GOAL</b>:</p>
-          <p>Create a Twitter bot that tweets out nail polish color names from popular polish brands.</p>
-        <p><b>CHALLENGES</b>:</p>
-          <p>Build my first Twitter bot.</p>
-          <p>Scrape brands' sites and the internet for full lists of color names.</p>
-          <p>Format data effectively to be randomly grabbed and tweeted.</p>
-        <p><b>SOLUTION</b>:</p>
-          <p>Something</p>
+        <p>This Twitter bot randomly picks a nail polish color from a JSON file and tweets the brand, color name and which collection that color is from. The JSON data was collected by scraping the brands’ sites.</p>
         <div class='tweets'>
+          <a href="https://twitter.com/AnotherCoat" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @AnotherCoat</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
           <div id='timeline'></div>
         </div>
+        </br>
+          <p><b>Challenge</b>: What to tweet?</p>
+          <p><b>Solution</b>: I had to figure out what I wanted my bot to tweet. I ended up deciding to do nail polish colors because there are a lot of fun names out there!</p>
+        </br>
+          <p><b>Challenge</b>: Scrape the internet for full lists of color names.</p>
+          <p><b>Solution</b>: I Googled around to find pages with comprehensive lists of colors for three popular nail polish brands: OPI, Essie and Butter London. Once I found what I was looking for, I inspected the HTML to see how the data was formatted. I scraped the sites to create an array of HTML items by typing <span class="code">var brand = document.getElementsByClassName('class')</span> into the console.</p>
+        </br>
+          <p><b>Challenge</b>: Format data effectively to be randomly grabbed and tweeted.</p>
+          <p><b>Solution</b>: Once I had an array of HTML elements, I figured out what to search for to find the data I needed from each item in the array. From there I wrote a for loop to grab the brand, color and collection from each element, which I then added to a JavaScript object. I ended up with a JSON formatted to have collections stored as keys whose values were objects containing each color as a key with the brand as it's value. Ex: </br><span class="code">{</br>"Sheers": {</br>"Blanc": "Essie"</br>}</br>}</span></br> Then I wrote a function to randomly select a collection, from which it would randomly select a color which it would format as a sentence, <span class="code">var tweet = color + ' by ' + brand + ' from the ' + collection + ' Collection.'</span>, and send as a tweet.</p>
       </div>
     </div>
     <script src="../js/jQuery.js"></script>
