@@ -129,6 +129,7 @@
 }
 #bootstrap-overrides .info {
   width: 100%;
+  min-height: 30vw;
 }
 #bootstrap-overrides .info h1 {
   text-align: left;
