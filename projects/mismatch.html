@@ -83,25 +83,26 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class='fa fa-play'></i> <b>CHALLENGE</b>: Find and display difference between mismatches.</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class='fa fa-play'></i> <b>CHALLENGE</b>: Find and display the difference between mismatches efficiently.</a>
               </h4>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse">
               <div class="panel-body">
-                <b>SOLUTION</b>: I found the difference between a user's followers and the accounts that the user follows(ATTUF) by creating an array for each and adding them to the user's data object. These two arrays get passed to function <span class="code">oneOrderedArray()</span>, which takes each handle's object and adds <span class="code">following</span>, <span class="code">followedBy</span> or both as keys, sets them as <span class="code">true</span> or <span class="code">false</span> and sorts the users alphabetically by username before returning a single array. This array is fed into the <span class="code">display()</span> function, which checks those keys to see how each user should show up on the site.
-                </br></br>At first, I printed the mismatches in two lists next to the section displaying followers and ATTUF. That wasn't aesthetically pleasing, so I removed the list, choosing to graphically mark the mismatching accounts in the display section instead. I thought it could still be improved, so I decided to display one master list of all of the users associated with an account using CSS to visualize the relationship between the user and each connection. This also proved helpful to an additional <b>CHALLENGE</b>, getting as much information as possible without exceeding the amount of calls to the API that Instagram allows.
+                <b>SOLUTION</b>: When I first built the page, I was making calls to the Instagram API to populate two arrays; one for the user's followers and the other for the accounts that the user follows(ATTUF). Then I would make two more calls to the API, just to get the usernames for each list, in order to compare them and list them on the side of the page. This resulted in hundreds of calls to the Instagram API, which ended up going over my hourly allowance. This taught me that there was a limit to how many calls I could make.
+                </br></br>To do this more efficiently, I created an array for the user's followers as well as the ATTUF and added them to the user's data object. These two arrays get passed to function <span class="code">oneOrderedArray()</span>, which takes each connection's object and adds <span class="code">following</span>, <span class="code">followedBy</span> or both as keys, sets them as <span class="code">true</span> or <span class="code">false</span> and returns a single array of connections sorted into alphabetical order. This array is fed into the <span class="code">display()</span> function, which checks those keys to see how each user should show up on the site.
+                </br></br>At first, I printed the mismatches in two lists next to the section displaying followers and ATTUF. That wasn't aesthetically pleasing, so I removed the list, choosing to graphically mark the mismatching accounts in the display section instead. I thought it could still be improved, so I consolidated down to one master list of all of the users associated with the searched account and used CSS to visualize the relationship between the user and each connection.
               </div>
             </div>
           </div>
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><i class='fa fa-play'></i> <b>CHALLENGE</b>: When a user searched for a different handle, their connections were still showing up under the searched user's heading.</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><i class='fa fa-play'></i> <b>CHALLENGE</b>: When the visitor searched for a different handle, their connections were still showing up under the searched user's heading.</a>
               </h4>
             </div>
             <div id="collapseThree" class="panel-collapse collapse">
               <div class="panel-body">
-                <b>SOLUTION</b>: I found the bug by logging the search results to the console when a new handle was typed in. This showed me that the search was returning that handle's information, it just wasn't displaying properly. That led me to look to the bottom of the list, where I found the new search's connections appended. It was an easy fix to make sure the old information was cleared every time a new search was performed.
+                <b>SOLUTION</b>: I found the bug by logging the search results to the console when a new handle was typed in. This showed me that the search was returning that handle's information, it just wasn't displaying properly. That led me to look to the bottom of the list, where I found the new search's connections appended. It was an easy fix to make sure the old information was cleared every time a new search was performed and with every other addition I've remembered to clear what was there before.
               </div>
             </div>
           </div>
