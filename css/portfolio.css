@@ -96,6 +96,9 @@
   font-size: 0.85em;
   color: #EAE2D4;
 }
+#bootstrap-overrides .gifme {
+  cursor: pointer;
+}
 #bootstrap-overrides .gifdiv {
   background-color: #020b22;
   background: center center no-repeat;
