@@ -133,6 +133,7 @@
 }
 #bootstrap-overrides .info h2 {
   font-size: 3em;
+  margin-top: 0;
 }
 #bootstrap-overrides .info .me {
   width: 25%;
@@ -436,11 +437,6 @@
     width: 35%;
     margin-top: 0;
     margin-right: 2%;
-  }
-  #bootstrap-overrides .jumbotron .info .about {
-    margin-left: 0%;
-    width: 100%;
-    text-align: center;
   }
   #bootstrap-overrides .jumbotron li .user {
     left: -9%;
