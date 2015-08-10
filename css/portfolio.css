@@ -131,11 +131,12 @@
   width: 100%;
   min-height: 30vw;
 }
-#bootstrap-overrides .info h1 {
-  text-align: left;
+#bootstrap-overrides .info h2 {
+  font-size: 3em;
 }
 #bootstrap-overrides .info .me {
   width: 25%;
+  margin: 10px;
   float: left;
   border-radius: 6px;
 }
@@ -187,7 +188,7 @@
   transition-duration: 200ms;
 }
 #bootstrap-overrides .panel-group .down {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
 }
 #bootstrap-overrides .panel-default > .panel-heading {
   background-color: transparent;
@@ -198,12 +199,35 @@
   padding-left: 15px;
   font-family: courier;
   min-width: 40%;
+  max-width: 100%;
+  overflow: auto;
   position: relative;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: rgba(255, 255, 255, 0.95);
-  color: #521E6A;
+  color: #837489;
+}
+#bootstrap-overrides .well .bl {
+  color: #028AE3;
+}
+#bootstrap-overrides .well .gr {
+  color: #00D79B;
+}
+#bootstrap-overrides .well .pr {
+  color: #D500FA;
+}
+#bootstrap-overrides .well .yw {
+  color: #FAB000;
+}
+#bootstrap-overrides .well .dk {
+  color: #020B22;
+}
+#bootstrap-overrides .well .or {
+  color: #FFB400;
+}
+#bootstrap-overrides .well .lb {
+  color: #72C0BA;
 }
 #bootstrap-overrides .tab {
   margin-left: 25px;
@@ -400,6 +424,9 @@
   }
   #bootstrap-overrides .jumbotron h1 {
     text-align: center;
+  }
+  #bootstrap-overrides .jumbotron .info {
+    display: inline-block;
   }
   #bootstrap-overrides .jumbotron .info .me {
     width: 35%;

@@ -69,7 +69,7 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in">
               <div class="panel-body">
-                <b>SOLUTION</b>: Each tile has an id number. When the user clicks a tile that is available, a function called <span class="code">setMove()</span> pushes an object containing the <span class="code">currentPlayer</span> and the box's id to an array called <span class="code">boxes</span>. Each time <span class="code">setMove()</span> is called, function <span class="code">checkWin()</span> gets called as well. This runs function <span class="code">getPlayerMoves()</span>, which looks at <span class="code">boxes</span> and returns an array of the current player's squares. This array is checked against all possible winning combinations. If there is a match, the <span class="code">setWin()</span> function is called, which turns off pointer events for all tiles using CSS.
+                <b>SOLUTION</b>: Each tile has an id number. When the user clicks a tile that is available, a function called <span class="code">setMove()</span> pushes an object containing the <span class="code">currentPlayer</span> and the tile's id to an array called <span class="code">boxes</span>. Each time <span class="code">setMove()</span> is called, function <span class="code">checkWin()</span> gets called as well. This runs function <span class="code">getPlayerMoves()</span>, which looks at <span class="code">boxes</span> and returns an array of the current player's tiles. This array is checked against all possible winning combinations. If there is a match, the <span class="code">setWin()</span> function is called, which turns off pointer events for all tiles using CSS.
               </div>
             </div>
           </div>
@@ -95,8 +95,8 @@
               <div class="panel-body">
                 <b>SOLUTION</b>: I created a JavaScript variable <span class="code">currentPlayer</span>, which is originally set to "X", who always starts the first game. I also created a function called <span class="code">otherPlayer()</span>, which which takes a player as a parameter and then returns the opponent.
                 </br>
-                <div class="well well-sm">function otherPlayer(player){
-                  </br><span class="tab">var mapping = {"X": "O", "O": "X"};</span>
+                <div class="well well-sm"><span class="bl">function</span> otherPlayer(<span class="yw">player</span>){
+                  </br><span class="tab"><span class="bl">var</span> mapping = {<span class="gr">"X"</span>: <span class="gr">"O"</span>, <span class="gr">"O"</span>: <span class="gr">"X"</span>};</span>
                   </br><span class="tab">return mapping[player];</span>
                   </br>};
                 </div>

@@ -73,7 +73,7 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in">
               <div class="panel-body">
-                <b>SOLUTION</b>: I Googled around to find pages with comprehensive lists of colors for three popular nail polish brands: OPI, Essie and Butter London. Once I found what I was looking for, I inspected the HTML to see how the data was formatted. I scraped the sites to create an array of HTML items by typing <span class="code">var brand = document.getElementsByClassName('class')</span> into the console.
+                <b>SOLUTION</b>: I Googled around to find pages with comprehensive lists of colors for three popular nail polish brands: OPI, Essie and Butter London. Once I found what I was looking for, I inspected the HTML to see how the data was formatted. I scraped the sites to create an array of HTML items by typing <span class="code">var brand = document.getElementsByClassName('class')</span> into the console, where brand and class were substituted according to each site.
               </div>
             </div>
           </div>
@@ -85,15 +85,32 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse">
               <div class="panel-body">
-                <b>SOLUTION</b>: Once I had an array of HTML elements, I figured out what to search for to find the data I needed from each item in the array. From there I wrote a for loop to grab the brand, color and collection from each element, which I then added to a JavaScript object. I ended up with a JSON formatted to have collections stored as keys whose values were objects containing each color as a key with the brand as it's value. Ex:
+                <b>SOLUTION</b>: Once I had an array of HTML elements, I would write a function using a <span class="code">for</span> loop to grab the brand, color and collection from each item, which I then added to a JavaScript object. I ended up with a JSON formatted to have collections stored as keys whose values were objects containing each color as a key with the brand as it's value. Ex:
                 </br>
                   <div class="well well-sm">{
-                  </br><span class="tab">"Sheers": {</span>
-                  </br><span class="tab"><span class="tab">"Blanc": "Essie"</span></span>
+                  </br><span class="tab"><span class="lb">"Sheers"</span>: {</span>
+                  </br><span class="tab"><span class="tab"><span class="lb">"Blanc"</span>: <span class="lb">"Essie"</span></span></span>
+                  </br><span class="tab"><span class="tab"><span class="lb">"Private Weekend"</span>: <span class="lb">"Essie"</span>,</span></span>
+                  </br><span class="tab"><span class="tab"><span class="lb">"Marshmallow"</span>: <span class="lb">"Essie"</span></span></span>
+                  </br><span class="tab"><span class="tab"><span class="lb">"Waltz"</span>: <span class="lb">"Essie"</span></span></span>
                   </br><span class="tab">}</span>
                   </br>};
                   </div>
-                </br>Then I wrote a function to randomly select a collection, from which it would randomly select a color which it would format as a sentence, <span class="code">var tweet = color + ' by ' + brand + ' from the ' + collection + ' Collection.'</span>, and send as a tweet.
+                </br>When the JSON file was complete, I wrote a <span class="code">randomizer()</span> function to select a collection, from which it would randomly select a color, which my <span class="code">generateTweet()</span> function would use to compose a string to send as a tweet.
+                </br>
+                  <div class="well well-sm"><span class="bl">function</span> <span class="dk">generateTweet</span>(<span class="yw">obj</span>){
+                  </br><span class="tab"><span class="bl">var</span> collection = randomizer(obj);</span>
+                  </br><span class="tab"><span class="bl">var</span> color = randomizer(obj[collection]);</span>
+                  </br><span class="tab"><span class="bl">var</span> brand = obj[collection][color];</span>
+                  </br><span class="tab"><span class="bl">var</span> tweet = color + <span class="gr">' by '</span> + brand + <span class="gr">' from the '</span> + collection + <span class="gr">' Collection.'</span></span>
+                  </br><span class="tab">if (tweet.<span class="bl">length</span> <= <span class="pr">140</span>){</span>
+                  </br><span class="tab"><span class="tab">return tweet;</span></span>
+                  </br><span class="tab">}</span>
+                  </br><span class="tab">else{</span>
+                  </br><span class="tab"><span class="tab">generateTweet(obj);</span></span>
+                  </br><span class="tab">}</span>
+                  </br>};
+                </div>
               </div>
             </div>
           </div>
