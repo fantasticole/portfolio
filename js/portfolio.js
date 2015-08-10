@@ -16,6 +16,13 @@ var main = function(){
 		interface.showGif();
 	});
 
+	$('.panel-title a').click(function(){
+		$('i', this).toggleClass('down');
+		$('.panel-title a').not(this).each(function(){
+			$('i', this).removeClass('down');
+		})
+	})
+
 	$(document).on('click', '.fa-close', function(){
 		$('.gifdiv').hide();
 	});

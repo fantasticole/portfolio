@@ -62,14 +62,51 @@
             <img class="wide" src="../images/graph.png" title="D3.js Graph">
             <p style="font-size: 1em;">[<span style="color: #DEC1FF;">Purple</span>: Tab Opens, <span style="color: #60E1E0;">Blue</span>: Tab Closes]</p>
           </div>
-          <p><b>Challenge</b>: Store and format tab open and close data to be displayed in a D3 graph.</p>
-          <p><b>Solution</b>: Whenever a tab is opened or closed, the extension's background.js file creates an object with three keys: 'Date', 'Opened' and 'Closed'. The 'Date' key gets a timestamp as its value. If a tab was opened, the value of 'Opened' is set to <span class="code">1</span> and 'Closed' is set to <span class="code">0</span>, with the reverse happening when a tab closes. This object is pushed to the 'Hourly' array, which is kept in Chrome's Local Storage. This array is used to find the average hourly opens and closes for the D3 graph.</p>
         </br>
-          <p><b>Challenge</b>: Keep data through extension reloads.</p>
-          <p><b>Solution</b>: Throughout it's creation, I had to reboot the extension many times. Whenever I did, the data I had stored in Chrome's Local Storage would be wiped. As I was watching my data during the refresh, I noticed that the previous information would only disappear once new data would overwrite it. This led me to my solution: </br><span class="code">if (getStorage('hourly') !== undefined){</br>hourly = getStorage('hourly');</br>};</span></br>This if statement allowed me to set the variable equal to what it was before the extension refreshed, keeping the data through each new update.</p>
-        </br>
-          <p><b>Challenge</b>: Make the collected data downloadable.</p>
-          <p><b>Solution</b>: I decided to make the collected data available for download as both a JSON and a TSV. The JSON gives more data, including every time a tab was opened of closed since the extensions started running, while the TSV gives the hourly averages that get graphed. When the user clicks one of the buttons to download data, a call is made to Local Storage to get either the data stored in 'tracker' (for the JSON) or the data stored in 'hourly' (for the TSV). This information can be analyzed by the user for whichever purpose they are curious about.</p>
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class='fa fa-play down'></i> <b>CHALLENGE</b>: Store and format tab open and close data to be displayed in a D3 graph.</a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <b>SOLUTION</b>: Whenever a tab is opened or closed, the extension's background.js file creates an object with three keys: 'Date', 'Opened' and 'Closed'. The 'Date' key gets a timestamp as its value. If a tab was opened, the value of 'Opened' is set to <span class="code">1</span> and 'Closed' is set to <span class="code">0</span>, with the reverse happening when a tab closes. This object is pushed to the 'Hourly' array, which is kept in Chrome's Local Storage. This array is used to find the average hourly opens and closes for the D3 graph.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class='fa fa-play'></i> <b>CHALLENGE</b>: Keep data through extension reloads.</a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                <b>SOLUTION</b>: Throughout its creation, I had to reboot the extension many times. Whenever I did, the data I had stored in Chrome's Local Storage would be wiped. As I was watching my data during the refresh, I noticed that the previous information would only disappear once new data would overwrite it. This led me to my solution: 
+                </br>
+                  <div class="well well-sm">if (getStorage('hourly') !== undefined){
+                    </br><span class="tab">hourly = getStorage('hourly');</span>
+                    </br>};
+                  </div>
+                </br>This if statement allowed me to set the variable equal to what it was before the extension refreshed, keeping the data through each new update.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><i class='fa fa-play'></i> <b>CHALLENGE</b>: Make the collected data downloadable.</a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+                <b>SOLUTION</b>: I decided to make the collected data available for download as both a JSON file and a TSV file. The JSON gives more data, including every time a tab was opened of closed since the extensions started running, while the TSV gives the hourly averages that get graphed. When the user clicks one of the buttons to download data, a call is made to Local Storage to get either the data stored in 'tracker' (for the JSON) or the data stored in 'hourly' (for the TSV). This information can be analyzed by the user for whichever purpose they are curious about.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="../js/jQuery.js"></script>

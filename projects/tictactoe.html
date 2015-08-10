@@ -58,19 +58,53 @@
         </div>
         <p>This is the first project I built from scratch for my application to <s>Hacker School</s> <a href="https://www.recurse.com/" target="_blank">Recurse Center</a>. It is a two-player Tic-Tac-Toe game that tracks how many wins each player has and alternates which player starts each game.</p>
         <iframe class="ttt" src="http://fantasticole.github.io/Tic-Tac-Toe/"></iframe>
-        </br>
-          <p><b>Challenge</b>: Check for the winner efficiently each time a move is made.</p>
-          <p><b>Solution</b>: When an available tile is clicked, function <span class="code">checkWin()</span> gets called. This runs function <span class="code">getPlayerMoves()</span>, which returns an array of the current players squares. This array is checked against all possible winning combinations. If there is a match, the <span class="code">setWin()</span> function is called, which turns off pointer events for all tiles using CSS.</p>
-        </br>
-          <p><b>Challenge</b>: Stop play once there is a victor or stalemate.</p>
-          <p><b>Solution</b>: Each tile has an id number. When a tile is available, a function called <span class="code">setMove()</span> pushes an object containing the <span class="code">currentPlayer</span> and the box's id to an array called <span class="code">boxes</span>. Each time a tile is clicked, a function called <span class="code">isSquareAvailable</span> is called, which checks to see if that tile's id is in <span class="code">boxes</span>. If not, <span class="code">setMove()</span> is called. Otherwise nothing happens. Each time <span class="code">setMove()</span> is called, the function <span class="code">checkWin()</span> is called as well. This function checks an array of the current player's boxes against an array of winning combinations. If any one of those combinations is found in the current player's boxes, <span class="code">setWin()</span> is called. Once a player wins or there is no way to win and no more moves can be made, the visitors can reset the board by clicking "Play again!" underneath the game board.</p>
-        </br>
-          <p><b>Challenge</b>: Track the amount of wins each player has.</p>
-          <p><b>Solution</b>: I used a JavaScript Object called tally to store the amount of wins each player has. When a visitor first arrives at the page, <span class="code">tally.forX</span> and <span class="code">tally.forO</span> are both set to 0. Once the <span class="code">checkWin</span> function returns true, the <span class="code">setWin</span> function gets called with the <span class="code">currentPlayer</span> passed in as a parameter. <span class="code">setWin</span> increases the appropriate player's tally based on the input.</p>
-        </br>
-          <p><b>Challenge</b>: Alternate player turn in the game and player starting each game.</p>
-          <p><b>Solution</b>: I created a JavaScript variable <span class="code">currentPlayer</span>, which is originally set to "X", who always starts the first game. I also created a function called otherPlayer, which which takes a player as a parameter and then returns the opponent. <span class="code">function otherPlayer(player){</br>var mapping = {"X": "O", "O": "X"};</br>return mapping[player];</br>};</span></br>. Each time a player moves, <span class="code">currentPlayer</span>. is set to <span class="code">otherPlayer(currentPlayer)</span>. Once the game is over, the <span class="code">resetBoard</span> function is called, which figures out whose turn it is by adding <span class="code">tally.forX</span> and <span class="code">tally.forO</span>. If the number is even, X will start the next game. If it's odd, O starts. This means that in the case of a draw, nobody wins and the same player starts the next game.</p>
-        </br>
+      </br>
+      </br>
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class='fa fa-play down'></i> <b>CHALLENGE</b>: Check for the winner efficiently each time a move is made.</a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <b>SOLUTION</b>: Each tile has an id number. When the user clicks a tile that is available, a function called <span class="code">setMove()</span> pushes an object containing the <span class="code">currentPlayer</span> and the box's id to an array called <span class="code">boxes</span>. Each time <span class="code">setMove()</span> is called, function <span class="code">checkWin()</span> gets called as well. This runs function <span class="code">getPlayerMoves()</span>, which looks at <span class="code">boxes</span> and returns an array of the current player's squares. This array is checked against all possible winning combinations. If there is a match, the <span class="code">setWin()</span> function is called, which turns off pointer events for all tiles using CSS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class='fa fa-play'></i> <b>CHALLENGE</b>: Track the amount of wins each player has.</a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                <b>SOLUTION</b>: I used a JavaScript Object called <span class="code">tally</span> to store the amount of wins each player has. When a visitor first arrives at the page, <span class="code">tally.forX</span> and <span class="code">tally.forO</span> are both set to zero. Once the <span class="code">checkWin()</span> function returns true, the <span class="code">setWin()</span> function gets called with the <span class="code">currentPlayer</span> passed in as a parameter. This function increases the appropriate player's tally based on the input.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><i class='fa fa-play'></i> <b>CHALLENGE</b>: Alternate player turn in the game and player starting each game.</a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+                <b>SOLUTION</b>: I created a JavaScript variable <span class="code">currentPlayer</span>, which is originally set to "X", who always starts the first game. I also created a function called <span class="code">otherPlayer()</span>, which which takes a player as a parameter and then returns the opponent.
+                </br>
+                <div class="well well-sm">function otherPlayer(player){
+                  </br><span class="tab">var mapping = {"X": "O", "O": "X"};</span>
+                  </br><span class="tab">return mapping[player];</span>
+                  </br>};
+                </div>
+                </br>Each time a player moves, <span class="code">currentPlayer</span> is set as what <span class="code">otherPlayer(currentPlayer)</span> returns. Once the game is over, the <span class="code">resetBoard()</span> function is called, which figures out whose turn it is by adding <span class="code">tally.forX</span> and <span class="code">tally.forO</span>. If the number is even, X will start the next game. If it's odd, O starts. This means that in the case of a draw, nobody wins and the same player starts the next game.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="../js/jQuery.js"></script>
