@@ -436,6 +436,9 @@
   #bootstrap-overrides .jumbotron {
     margin-top: 20%;
   }
+  #bootstrap-overrides .jumbotron .welcome {
+    font-size: 4.5em;
+  }
   #bootstrap-overrides .jumbotron .contact a {
     font-size: 1em;
   }
