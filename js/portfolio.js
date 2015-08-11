@@ -38,7 +38,12 @@ var main = function(){
 		"lang": 'en'
 	};
 
-	twitterFetcher.fetch(config);
+	var here = window.location.href;
+
+	if (here.indexOf('polish') > -1){
+		twitterFetcher.fetch(config);
+	};
+
 
 	$(window).resize(function(){
 		if ($(window).width() < 550){

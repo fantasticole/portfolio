@@ -11,7 +11,7 @@
 			$('.gifdiv').html('');
 			$('.gifdiv').css('background-image', 'url(' + gifs[newGif()] + ')');
 			$('.gifdiv').css('background-color', 'rgb(2, 11, 34)');
-			$('.gifdiv').append('<i class="fa fa-close fa-3x"></i>');
+			$('.gifdiv').append('<i class="fa fa-close fa-2x"></i>');
 		}
 	};
 	window.interface = interface;
