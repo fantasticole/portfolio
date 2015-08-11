@@ -142,6 +142,9 @@
 #bootstrap-overrides .jumbotron #projects div {
   border-radius: 3px;
 }
+#bootstrap-overrides .jumbotron #projects div:hover .overlay {
+  border-radius: 0;
+}
 #bootstrap-overrides .jumbotron .insta,
 #bootstrap-overrides .jumbotron .twitterbot,
 #bootstrap-overrides .jumbotron .chrome,
@@ -161,15 +164,14 @@
 #bootstrap-overrides .jumbotron .twitterbot:hover,
 #bootstrap-overrides .jumbotron .chrome:hover,
 #bootstrap-overrides .jumbotron .tictactoe:hover {
-  border: 15px solid #00D79B;
+  border: 8px solid #00D79B;
 }
 #bootstrap-overrides .jumbotron .insta:hover .overlay,
 #bootstrap-overrides .jumbotron .twitterbot:hover .overlay,
 #bootstrap-overrides .jumbotron .chrome:hover .overlay,
 #bootstrap-overrides .jumbotron .tictactoe:hover .overlay {
   background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 5px 5px 10px #020B22;
-  border-radius: 0;
+  box-shadow: 4px 4px 10px #020B22;
 }
 #bootstrap-overrides .jumbotron .insta:hover p,
 #bootstrap-overrides .jumbotron .twitterbot:hover p,
@@ -529,24 +531,6 @@
     display: inline-block;
     height: 45vw;
     margin-top: 5px;
-  }
-  #bootstrap-overrides .jumbotron #projects .insta:hover,
-  #bootstrap-overrides .jumbotron #projects .twitterbot:hover,
-  #bootstrap-overrides .jumbotron #projects .chrome:hover,
-  #bootstrap-overrides .jumbotron #projects .tictactoe:hover {
-    border: 10px solid #00D79B;
-  }
-  #bootstrap-overrides .jumbotron #projects .insta:hover p,
-  #bootstrap-overrides .jumbotron #projects .twitterbot:hover p,
-  #bootstrap-overrides .jumbotron #projects .chrome:hover p,
-  #bootstrap-overrides .jumbotron #projects .tictactoe:hover p {
-    font-size: 2.5em;
-  }
-  #bootstrap-overrides .jumbotron #projects .insta:hover .overlay,
-  #bootstrap-overrides .jumbotron #projects .twitterbot:hover .overlay,
-  #bootstrap-overrides .jumbotron #projects .chrome:hover .overlay,
-  #bootstrap-overrides .jumbotron #projects .tictactoe:hover .overlay {
-    border-radius: 0;
   }
   #bootstrap-overrides .jumbotron .contact a {
     font-size: 1em;
