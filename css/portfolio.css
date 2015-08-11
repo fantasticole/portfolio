@@ -132,6 +132,86 @@
   font-size: 6em;
   font-family: 'Covered By Your Grace', serif;
 }
+#bootstrap-overrides .jumbotron .projects {
+  width: 100%;
+  min-height: 45vw;
+  position: relative;
+  margin: auto;
+  display: inline-block;
+}
+#bootstrap-overrides .jumbotron .projects div {
+  border-radius: 3px;
+}
+#bootstrap-overrides .jumbotron .projects .insta,
+#bootstrap-overrides .jumbotron .projects .twitterbot,
+#bootstrap-overrides .jumbotron .projects .chrome,
+#bootstrap-overrides .jumbotron .projects .tictactoe {
+  position: absolute;
+  width: 49%;
+  height: 21.5vw;
+  cursor: pointer;
+}
+#bootstrap-overrides .jumbotron .projects .insta p,
+#bootstrap-overrides .jumbotron .projects .twitterbot p,
+#bootstrap-overrides .jumbotron .projects .chrome p,
+#bootstrap-overrides .jumbotron .projects .tictactoe p {
+  visibility: hidden;
+}
+#bootstrap-overrides .jumbotron .projects .insta:hover,
+#bootstrap-overrides .jumbotron .projects .twitterbot:hover,
+#bootstrap-overrides .jumbotron .projects .chrome:hover,
+#bootstrap-overrides .jumbotron .projects .tictactoe:hover {
+  border: 15px solid #00D79B;
+}
+#bootstrap-overrides .jumbotron .projects .insta:hover .overlay,
+#bootstrap-overrides .jumbotron .projects .twitterbot:hover .overlay,
+#bootstrap-overrides .jumbotron .projects .chrome:hover .overlay,
+#bootstrap-overrides .jumbotron .projects .tictactoe:hover .overlay {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 5px 5px 10px #020B22;
+  border-radius: 0;
+}
+#bootstrap-overrides .jumbotron .projects .insta:hover p,
+#bootstrap-overrides .jumbotron .projects .twitterbot:hover p,
+#bootstrap-overrides .jumbotron .projects .chrome:hover p,
+#bootstrap-overrides .jumbotron .projects .tictactoe:hover p {
+  font-family: 'Covered By Your Grace', serif;
+  font-size: 3em;
+  visibility: visible;
+  color: #1E1454;
+  padding-top: 20%;
+}
+#bootstrap-overrides .jumbotron .projects .insta {
+  background-image: url("../images/desktop.png");
+  background-size: 100%;
+  top: 0;
+  left: 0;
+}
+#bootstrap-overrides .jumbotron .projects .twitterbot {
+  background-image: url("../images/twitterbot.png");
+  background-size: 100%;
+  top: 0;
+  right: 0;
+}
+#bootstrap-overrides .jumbotron .projects .chrome {
+  background-image: url("../images/graph.png");
+  background-size: 100%;
+  bottom: 0;
+  left: 0;
+}
+#bootstrap-overrides .jumbotron .projects .tictactoe {
+  background-image: url("../images/ttt.png");
+  background-size: 100%;
+  bottom: 0;
+  right: 0;
+}
+#bootstrap-overrides .jumbotron .projects .overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(2, 11, 34, 0.3);
+  z-index: 10;
+}
 #bootstrap-overrides .info {
   width: 100%;
   min-height: 30vw;

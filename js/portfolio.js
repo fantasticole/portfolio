@@ -16,6 +16,22 @@ var main = function(){
 		interface.showGif();
 	});
 
+	$('.insta').click(function(){
+		window.location = './projects/mismatch.html'
+	});
+
+	$('.twitterbot').click(function(){
+		window.location = './projects/polish.html'
+	});
+
+	$('.chrome').click(function(){
+		window.location = './projects/tabber.html'
+	});
+
+	$('.tictactoe').click(function(){
+		window.location = './projects/tictactoe.html'
+	});
+
 	$('.panel-title a').click(function(){
 		$('i', this).toggleClass('down');
 		$('.panel-title a').not(this).each(function(){
