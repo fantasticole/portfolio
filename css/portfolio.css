@@ -165,13 +165,13 @@
 #bootstrap-overrides .jumbotron .twitterbot:hover,
 #bootstrap-overrides .jumbotron .chrome:hover,
 #bootstrap-overrides .jumbotron .tictactoe:hover {
-  border: 8px solid #00D79B;
+  border: 8px solid #020B22;
 }
 #bootstrap-overrides .jumbotron .insta:hover .overlay,
 #bootstrap-overrides .jumbotron .twitterbot:hover .overlay,
 #bootstrap-overrides .jumbotron .chrome:hover .overlay,
 #bootstrap-overrides .jumbotron .tictactoe:hover .overlay {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(2, 11, 34, 0.3);
   box-shadow: 4px 4px 10px #020B22;
 }
 #bootstrap-overrides .jumbotron .insta:hover p,
@@ -181,7 +181,8 @@
   font-family: 'Covered By Your Grace', serif;
   font-size: 3em;
   visibility: visible;
-  color: #1E1454;
+  text-shadow: 2px 2px #00D79B;
+  color: #020B22;
   padding-top: 20%;
 }
 #bootstrap-overrides .jumbotron .insta {
@@ -212,7 +213,7 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: rgba(2, 11, 34, 0.3);
+  background-color: rgba(2, 11, 34, 0.7);
   z-index: 10;
 }
 #bootstrap-overrides .info {
