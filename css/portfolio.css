@@ -213,7 +213,7 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: rgba(2, 11, 34, 0.7);
+  background-color: rgba(2, 11, 34, 0.5);
   z-index: 10;
 }
 #bootstrap-overrides .info {
